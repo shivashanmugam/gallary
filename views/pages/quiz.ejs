@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <% include ../partials/head %>
+    <link rel="stylesheet" href="./static/libs/editor.md-master/css/editormd.css" />
+</head>
+
+<body ng-keydown="changeQuestion($event)" class="container-fluid" ng-app="quizApp" ng-controller="quizCtrl" ng-init="init()">
+  <div class="row" />
+  <div class="col-md-9">
+    <div id="editormd-container">
+      <div id="editormd">
+          <textarea style="display:none;"></textarea>
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-md-3 form-group" id="side-panel" >
+      <div id="heading">
+          <input ng-model="selectedQuestionTitle" placeholder="title" type="text" class="form-control form-control-lg" />
+        </div>
+    <button ng-click="openCreateNewPage()" ng-show="isEdit" class="btn btn-primary btn-lg">Create New</button>
+    <select ng-model="selectedCategory" ng-change="filterQuestionByCategory()" class="form-control form-control-lg">
+      <option ng-repeat="category in categories" >{{category}}</option>
+    </select>
+    <select ng-model="selectedQuestionIndex" ng-change="setSelectedQuestion()" ng-show="isEdit" class="form-control form-control-lg">
+      <option ng-value="$index" ng-repeat="question in filteredQuestions" >{{question.title}}</option>
+    </select>
+    <button ng-click="editorSubmit()" class="btn btn-success btn-lg">Save</button>
+    <div class="alert {{statusClass}}"  ng-model="statusMessage" ng-show="statusMessage">
+      {{statusMessage}}
+    </div>
+  </div>
+</body>
+
+<% include ../partials/script %>
+  <script src="./static/libs/editor.md-master/editormd.js"></script>
+  <script src="./static/js/quiz.js"></script>
+  <script src="./static/js/services/quiz_service.js"></script>
+  <script src="./static/js/controllers/quiz_controller.js"></script>
+  <script type="text/ng-template" id="editor-md-template.html">
+  </script>
+  </body>
+
+</html>

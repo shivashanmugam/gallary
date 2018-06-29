@@ -1,0 +1,28 @@
+#side-panel button, #side-panel select {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.margin-padding-0, body > .row, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#side-panel {
+  margin-top: 10%;
+}
+#editormd-container {
+  height: 100% !important;
+}
+#heading {
+  margin-top: 3%;
+  width: 100%;
+  height: 10%;
+}
+
+/*# sourceMappingURL=style.css.map */

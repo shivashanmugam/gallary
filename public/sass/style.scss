@@ -1,0 +1,42 @@
+// @import  '_bootstrap_config.scss';
+
+%side-panel-elements{
+  width:100%;
+  margin-bottom: 10%;
+}
+
+.margin-padding-0{
+  margin :0 !important;
+  padding: 0 !important;
+}
+
+body{
+  @extend .margin-padding-0;
+  height:100%;
+  overflow:hidden;
+}
+
+body > .row{
+  @extend .margin-padding-0;
+}
+
+#side-panel {
+
+  margin-top:10%;
+
+  button, select{
+    @extend %side-panel-elements;
+  }
+}
+#editormd-container{
+  height: 100% !important;
+  #editormd{
+  }
+}
+
+
+#heading{
+  margin-top: 3%;
+  width: 100%;
+  height:10%;
+}
