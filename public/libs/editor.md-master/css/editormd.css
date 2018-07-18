@@ -3294,6 +3294,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
+  color:yellow;
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.1;
