@@ -4382,10 +4382,10 @@ hr.editormd-page-break {
     color: #ff9900;
   }
   .editormd-preview-theme-dark .com {
-    color: #444444;
+    color: silver; /*comment color changed by siva*/
   }
   .editormd-preview-theme-dark .typ {
-    color: #606;
+    color: rgb(228, 154, 228); /* import Jquery from Jquery; // in the statement color of Jquery */
   }
   .editormd-preview-theme-dark .lit {
     color: #066;
